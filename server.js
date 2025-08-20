@@ -81,10 +81,10 @@ app.get('/_api/get-tests', cors(), function (req, res, next) {
     });
   });
 
-
+require('dotenv').config();
 const port = process.env.PORT || 3000;
 app.listen(port, function () {
-  console.log("Listening on port " + port);
+  console.log(`Listening on port http://localhost:${port}/`);
   console.log('Running Tests...');
   setTimeout(function () {
     try {
